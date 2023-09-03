@@ -84,9 +84,8 @@ the minimum number of times it needs to be applied.
    implication is false, it also gives a list of literals whose
    implication is false, showing us why the implication is false.
 
-
-Expondremos a continuación algunos ejemplos de uso de las funciones
-incluidas en `CnfDpa.hs`.
+Here are some examples of how to use the functions included in 
+`CnfDpa.hs`.
 
 By means of `ex00` we propose an example that requires repeated use of
 `dak`:
