@@ -5,7 +5,7 @@ import Data.List
 -- TYPE DEFINITIONS
 
 {- 
-We define the "Literal" data  type, based on the integers "Int". 
+We define the "Literal" data  type, based on integers "Int". 
 -}
 
 data Literal = L Int | No Literal deriving Eq
