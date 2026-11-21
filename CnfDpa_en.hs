@@ -498,7 +498,7 @@ isLogEquiv x y = sImplies [x] y && sImplies [y] x
 {- The following function also checks whether two formulas are
 equivalent or not. But we have done the test with "a=dis 1000" and "b=imp
 1000" (see below for the definition of both functions). With "isLogEquiv a
-b" took approximately 2 seconds, while "isLogEquiv2 a b" took 18 -}
+b" took approximately 2 seconds, while "isLogEquiv2 a b" took 18
 
 isLogEquiv2 :: Formula -> Formula -> Bool
 isLogEquiv2 x y = tautological (E x y)
@@ -882,34 +882,6 @@ potencia n a b = C a (potencia (n-1) a b)
 
 lineal :: Int -> Formula
 lineal n = C (potencia n (C (Fa 1) (Fa 2)) (Fa 3)) (C (potencia n (C (Fa 2) (Fa 1)) (Fa 3)) (Fa 3))
-
-{-
-Example to check the semantic implication:
-
-                      ¿alfa1, alfa2, alfa3 |= beta?
-
--}
-
-alfa1 :: Formula 
-alfa1 = C (A (Fa 1) (N (Fa 2))) (K (Fa 2) (N (Fa 3)))
-
-alfa2 :: Formula
-alfa2 = C (E (Fa 1) (Fa 2)) (Fa 3)
-
-alfa3 :: Formula
-alfa3 = K (A (Fa 1) (Fa 3)) (C (N (Fa 1)) (A (Fa 2) (Fa 3)))
-
-beta1 :: Formula
-beta1 = C (Fa 2) (A (Fa 1) (N (Fa 3)))
-
-beta2 :: Formula
-beta2 = K (A (Fa 1) (Fa 2)) (C (N (Fa 1)) (K (Fa 2) (Fa 3)))
-
-beta3 :: Formula
-beta3 = E (Fa 1) (Fa 3)
-
-beta4 :: Formula
-beta4 = C (N (Fa 1)) (C (Fa 2) (N (Fa 3)))
 
 
 -- LATEST EXAMPLES --
