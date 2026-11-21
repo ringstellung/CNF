@@ -997,3 +997,23 @@ ex00 n m = A (ex00A n m) (ex00 (n-1) m)
 
 frege :: Formula
 frege = C (C (Fa 1) (C (Fa 2) (Fa 3))) (C (C (Fa 1) (Fa 2)) (C (Fa 1) (Fa 3)))
+
+{- Alias para los nombres usados en readme.md -}
+
+associate :: Formula -> Formula
+associate = asociate
+
+lg :: Formula -> Int
+lg = longitud
+
+pigeonhole :: Int -> [[Literal]]
+pigeonhole = palomar
+
+meredithw :: Formula
+meredithw = meredithmal
+
+example1, example2, example3, example4 :: Formula
+example1 = meredithArt1
+example2 = meredithArt2
+example3 = meredithArt3
+example4 = meredithArt4

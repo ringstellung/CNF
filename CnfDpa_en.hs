@@ -925,3 +925,23 @@ beta3 = E (Fa 1) (Fa 3)
 
 beta4 :: Formula
 beta4 = C (N (Fa 1)) (C (Fa 2) (N (Fa 3)))
+
+{- Aliases for the names used in readme.md -}
+
+associate :: Formula -> Formula
+associate = asociate
+
+lg :: Formula -> Int
+lg = longitud
+
+pigeonhole :: Int -> [[Literal]]
+pigeonhole = palomar
+
+meredithw :: Formula
+meredithw = meredithmal
+
+example1, example2, example3, example4 :: Formula
+example1 = meredithArt1
+example2 = meredithArt2
+example3 = meredithArt3
+example4 = meredithArt4
